@@ -1,0 +1,9 @@
+def twoSum(self, nums: List[int], target: int) -> List[int]:
+        #Существует лишь одна пара чисел дающая target, будем искать второе число как m = taget - n
+        visited = {}
+        for i, n in enumerate(nums):
+            m = target - n
+            if m in visited:
+                return [visited[m], i]
+            else:
+                visited[n] = i
