@@ -1,0 +1,12 @@
+def isValid(self, s: str) -> bool:
+        stack = []
+        d = {')': '(', ']': '[', '}': '{'}
+        #([}])
+        
+        for elem in s:
+            if elem in d.values():
+                stack.append(elem)
+            elif elem in d:
+                if stack == [] or stack.pop() != d[elem]: return False 
+                
+        return stack == []
