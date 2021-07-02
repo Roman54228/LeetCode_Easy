@@ -1,0 +1,6 @@
+ i = 0
+        for elem in nums:
+            if elem != val:
+                nums[i] = elem
+                i += 1
+        return i
